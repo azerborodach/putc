@@ -22,4 +22,8 @@ class Putc extends PHPUnit_Framework_TestCase {
 		return $property->getValue($object);
 	}
 
+	protected function assertArray($testing) {
+		return is_array($testing);
+	}
+
 }
