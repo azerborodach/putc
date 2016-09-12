@@ -27,7 +27,6 @@ class Putc extends PHPUnit_Framework_TestCase {
 	}
 
 	protected function assertXml($testing) {
-		return (bool) simplexml_load_string($testing);
+		return $this->assertNotFalse(simplexml_load_string($testing));
 	}
-
 }
