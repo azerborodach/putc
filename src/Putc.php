@@ -23,7 +23,7 @@ class Putc extends PHPUnit_Framework_TestCase {
 	}
 
 	protected function assertArray($testing) {
-		return is_array($testing);
+		$this->assertInternalType('array', $testing);
 	}
 
 	protected function assertXml($testing) {
