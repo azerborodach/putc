@@ -22,11 +22,11 @@ class Putc extends PHPUnit_Framework_TestCase {
 		return $property->getValue($object);
 	}
 
-	protected function assertArray($testing) {
-		$this->assertInternalType('array', $testing);
+	protected static function assertArray($testing) {
+		self::assertInternalType('array', $testing);
 	}
 
-	protected function assertXml($testing) {
-		return $this->assertNotFalse(simplexml_load_string($testing));
+	protected static function assertXml($testing) {
+		self::assertNotFalse(simplexml_load_string($testing));
 	}
 }
